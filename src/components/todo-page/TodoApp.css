@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'IronickNF'; /* give your font a name to reference it by later on! */
+    src: url(./../../IronickNF.ttf);
+}
+
+/*-----TodoApp.js-----*/
+.todolistHeader {
+  font-family: IronickNF;
+}
+
+/*-----TodolistItem.js-----*/
+table {
+  margin: auto;
+}
+
+.taskEditInput {
+    width: 342px;
+    height: 42px;
+    padding: 8px;
+    border-color: #d6d6d6;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: thin;
+    margin-left: 42px;
+    float: left;
+}
+
+.TodoblockItem {
+  padding-left: 5px;
+  padding-right: 50px;
+  width: 400px;
+  color: white;
+}
+
+.ActionSection {
+  position: absolute;
+}

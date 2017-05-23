@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'IronickNF'; /* give your font a name to reference it by later on! */
+    src: url(./../../IronickNF.ttf);
+}
+
+/* ScrollBar*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+/* Before list*/
+.beautyBlock {
+  height: 50px;
+}
+
+.itemsAccordion {
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  overflow: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 1em;
+  margin: 0;
+}
+
+.PersonInfo {
+  text-align: left;
+  font-size: 18px;
+  color: grey;
+}
+
+a:link {
+  color: #6da3f9;
+}
+
+a:visited {
+  color: #6da3f9;
+}
+
+a:hover {
+  color: #2771e8;
+}
+
+a:active {
+  color: #f08800;
+}
+
+
+li {
+  padding: 4px;
+}
+
+.PersonButton {
+  background: #f08800;
+  background-image: -webkit-linear-gradient(top, #ffae45, #f08800);
+  background-image: -moz-linear-gradient(top, #ffae45, #f08800);
+  background-image: -o-linear-gradient(top, #ffae45, #f08800);
+  background-image: linear-gradient(to bottom, #ffae45, #f08800);
+
+  width: 388px;
+  height: 60px;
+  background-color: #f08800;
+  color: white;
+  font-size: 32px;
+  font-family: IronickNF;
+  border: solid white 1px;
+}
+
+.Username {
+  font-size: 24px;
+  font-style: italic;
+}
