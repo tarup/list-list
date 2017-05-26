@@ -30,3 +30,7 @@ input:focus {
   outline: none;
   border-color: #f08800;
 }
+
+.CreateBlock {
+  padding-bottom: 30px;
+}

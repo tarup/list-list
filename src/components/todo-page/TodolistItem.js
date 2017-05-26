@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroupItem, Button, InputGroup } from 'react-bootstrap';
+import { ListGroupItem, Button } from 'react-bootstrap';
 import './TodoApp.css';
 
 export default class TodolistItem extends React.Component {
@@ -66,13 +66,10 @@ export default class TodolistItem extends React.Component {
           <tbody>
             <tr>
                 <td>
-                  <InputGroup>
-                    <InputGroup.Button>
-                      <Button onClick={this.props.toggleTask.bind(this, task)}>
-                          &#9745;
-                      </Button>
-                    </InputGroup.Button>
-                  </InputGroup>
+                  <Button className="CheckButton"
+                          onClick={this.props.toggleTask.bind(this, task)}>
+                      &#9745;
+                  </Button>
                 </td>
                 <Todoblock/>
             </tr>
@@ -88,13 +85,10 @@ export default class TodolistItem extends React.Component {
         <tbody>
           <tr>
               <td>
-                <InputGroup>
-                  <InputGroup.Button>
-                    <Button onClick={this.props.toggleTask.bind(this, task)}>
-                        &#9744;
-                    </Button>
-                  </InputGroup.Button>
-                </InputGroup>
+                  <Button className="CheckButton"
+                          onClick={this.props.toggleTask.bind(this, task)}>
+                      &#9744;
+                  </Button>
               </td>
               <Todoblock/>
           </tr>
@@ -108,15 +102,18 @@ export default class TodolistItem extends React.Component {
     if (this.state.isEditing)  {
       return (
         <td className="ActionSection">
-          <Button onClick={this.onSaveClick.bind(this)}>&#10003;</Button>
-          <Button onClick={this.onCancelClick.bind(this)}>&#8630;</Button>
+          <Button className="ActButton"
+                  onClick={this.onSaveClick.bind(this)}>&#10003;</Button>
+          <Button className="CancelButton"
+                  onClick={this.onCancelClick.bind(this)}>&#8630;</Button>
         </td>
       );
     }
 
     return (
       <td className="ActionSection">
-        <Button onClick={this.props.deleteTask.bind(this, this.props.task)}>
+        <Button className="ActButton"
+                onClick={this.props.deleteTask.bind(this, this.props.task)}>
             &#10007;
         </Button>
       </td>
@@ -125,7 +122,7 @@ export default class TodolistItem extends React.Component {
 
   render () {
     return (
-      <tr>
+      <tr className="TodoBlocks">
           {this.renderTaskSection()}
           {this.renderActionsSection()}
       </tr>

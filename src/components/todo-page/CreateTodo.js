@@ -12,15 +12,16 @@ export default class CreateTodo extends React.Component {
   }
 
   renderError() {
+
     if(!this.state.error) { return null; }
 
-    return <div style={{ color: 'red' }}>{this.state.error}</div>
+    return <div style={{ color: '#a400ba', fontSize: '16px' }}><strong>{this.state.error}</strong></div>
   }
 
   /*Submits new task*/
   render() {
     return (
-      <form onSubmit={this.handleCreate.bind(this)}>
+      <form onSubmit={this.handleCreate.bind(this)} className="CreateBlock">
 
         <FormGroup>
           <InputGroup className="TodoInput">
