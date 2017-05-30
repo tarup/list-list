@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Panel, Modal } from 'react-bootstrap';
+import { Button, Panel, Modal, Image } from 'react-bootstrap';
 import './Userlist.css';
 /*Icons*/
 import Telephone from 'react-icons/lib/fa/phone';
@@ -29,7 +29,15 @@ export default class UserItem extends React.Component {
         <Panel className="PersonInfo" bsClass=""
                collapsible expanded={this.state.open}>
           <ul>
-            <li className="Username">{ person.username }</li><br/>
+            <li className="Username">{ person.username }
+              <Image className="personImage"
+                     src={require('./../../seal_thumb.jpeg')}
+                     responsive
+                     thumbnail
+                     alt="person"
+              />
+            </li>
+            <br/><br/><br/>
             <li><Mail/> { person.email }</li>
             <li><Telephone /> { person.phone } </li>
             <li>
@@ -44,13 +52,14 @@ export default class UserItem extends React.Component {
     );
   }
 
+  /*Testing Modal component. Includes person address.*/
   renderModal() {
     const person = this.state.user;
     let close = () => this.setState({ showModal: false});
 
     return (
       <div className="modal-container">
-        <Button bsStyle="info" style={{marginLeft:'80%'}}
+        <Button bsStyle="contactperson"
                 onClick={() => this.setState({ showModal: true})}>
                 Contact
         </Button>
@@ -67,14 +76,15 @@ export default class UserItem extends React.Component {
               {person.name} - Address
             </Modal.Title>
           </Modal.Header>
+
           <Modal.Body>
-            Streetname: {person.address.street}, {person.address.suite}
+            <span className="AddressInfo">Streetname: </span>
+              {person.address.street}, {person.address.suite}
             <br/>
-            City: {person.address.zipcode} {person.address.city}
+            <span className="AddressInfo">City: </span>
+              {person.address.zipcode} {person.address.city}
+            <br/><br/>
           </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={close}>Close</Button>
-          </Modal.Footer>
         </Modal>
       </div>
     );

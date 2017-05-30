@@ -18,7 +18,7 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
-/* Before list*/
+/*Userlist.js*/
 .beautyBlock {
   height: 50px;
 }
@@ -26,8 +26,31 @@
 .itemsAccordion {
   margin: auto;
   width: 400px;
-  height: 400px;
+  height: 436px;
   overflow: auto;
+}
+
+/*UserlistItem.js*/
+.PersonButton {
+  background: #f08800;
+  background-image: -webkit-linear-gradient(top, #ffae45, #f08800);
+  background-image: -moz-linear-gradient(top, #ffae45, #f08800);
+  background-image: -o-linear-gradient(top, #ffae45, #f08800);
+  background-image: linear-gradient(to bottom, #ffae45, #f08800);
+
+  width: 388px;
+  height: 60px;
+  background-color: #f08800;
+  color: white;
+  font-size: 32px;
+  font-family: IronickNF;
+  border: solid white 1px;
+}
+
+.PersonInfo {
+  text-align: left;
+  font-size: 18px;
+  color: grey;
 }
 
 ul {
@@ -36,10 +59,19 @@ ul {
   margin: 0;
 }
 
-.PersonInfo {
-  text-align: left;
-  font-size: 18px;
-  color: grey;
+li {
+  padding: 4px;
+}
+
+.Username {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.personImage {
+  float: right;
+  width: 96px;
+  height: 96px;
 }
 
 a:link {
@@ -58,35 +90,28 @@ a:active {
   color: #f08800;
 }
 
-
-li {
-  padding: 4px;
-}
-
-.PersonButton {
-  background: #f08800;
-  background-image: -webkit-linear-gradient(top, #ffae45, #f08800);
-  background-image: -moz-linear-gradient(top, #ffae45, #f08800);
-  background-image: -o-linear-gradient(top, #ffae45, #f08800);
-  background-image: linear-gradient(to bottom, #ffae45, #f08800);
-
-  width: 388px;
-  height: 60px;
-  background-color: #f08800;
-  color: white;
-  font-size: 32px;
-  font-family: IronickNF;
-  border: solid white 1px;
-}
-
-.Username {
-  font-size: 24px;
-  font-style: italic;
-}
-
 .modal-container {
   position: relative;
 }
 .modal-container .modal, .modal-container .modal-backdrop {
   position: absolute;
+}
+
+.modal-body {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.btn-contactperson {
+  background: #6da3f9;
+  background-image: -webkit-linear-gradient(top, #7fa7e8, #6da3f9);
+  background-image: -moz-linear-gradient(top, #7fa7e8, #6da3f9);
+  background-image: -o-linear-gradient(top, #7fa7e8, #6da3f9);
+  background-image: linear-gradient(to bottom, #7fa7e8, #6da3f9);
+  color: white;
+  margin-left: 75%;
+}
+
+.AddressInfo {
+  color: #f08800;
 }
