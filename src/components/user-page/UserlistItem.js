@@ -59,7 +59,8 @@ export default class UserItem extends React.Component {
 
     return (
       <div className="modal-container">
-        <Button bsStyle="contactperson"
+        <Button bsStyle={null}
+                className="contactperson"
                 onClick={() => this.setState({ showModal: true})}>
                 Contact
         </Button>
